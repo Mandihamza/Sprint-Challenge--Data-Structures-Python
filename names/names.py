@@ -13,11 +13,13 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
+# This solution is O(n²) quadratic
 # for name_1 in names_1:  # iterate through each name in name_1.txt one-by-one
 #     for name_2 in names_2:  # iterate through each name in name_2.txt one-by-one
 #         if name_1 == name_2:  # if name in name_1.txt is duplicate of name in name_2.txt
 #             duplicates.append(name_1)  # append name_1.txt to duplicates list
 
+# This solution is O(n) linear
 for name in names_1:  # iterate through each name in name_1.txt one-by-one
     if name in names_2:  # check if name in name_1.txt is also in names_2.txt
         if name not in duplicates:  # check if name is not yet in duplicates list
